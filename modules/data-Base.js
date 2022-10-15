@@ -1,11 +1,3 @@
-export const gameOfLife = [
-    ['*', '*', '*', '*', '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', '*', '*', '*', '*'],
-];
-
 export function AliveItems(r, c, countN) {
     this.r = r;
     this.c = c;

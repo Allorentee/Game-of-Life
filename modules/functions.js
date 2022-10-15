@@ -1,5 +1,5 @@
-import {
-    gameOfLife,
-    aliveDataBaseNeighbours,
-    deathDataBaseNeighbours,
-} from './modules/data-Base.js';
+// import {
+//     gameOfLife,
+//     aliveDataBaseNeighbours,
+//     deathDataBaseNeighbours,
+// } from './modules/data-Base.js';
