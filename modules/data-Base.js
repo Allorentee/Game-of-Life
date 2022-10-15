@@ -1,9 +1,4 @@
-export function AliveItems(r, c, countN) {
-    this.r = r;
-    this.c = c;
-    this.countN = countN;
-}
-export function DeathItems(r, c, countN) {
+export function Cell(r, c, countN) {
     this.r = r;
     this.c = c;
     this.countN = countN;
@@ -23,7 +18,7 @@ export const aliveDataBaseNeighbours = (array) => {
                 if (array[i + 1][j - 1] === 1) count++;
                 if (array[i - 1][j + 1] === 1) count++;
                 if (array[i + 1][j + 1] === 1) count++;
-                arrayAliveObjects.push(new AliveItems(i, j, count));
+                arrayAliveObjects.push(new Cell(i, j, count));
             }
         }
     }
@@ -44,7 +39,7 @@ export const deathDataBaseNeighbours = (array) => {
                 if (array[i + 1][j - 1] === 1) count++;
                 if (array[i - 1][j + 1] === 1) count++;
                 if (array[i + 1][j + 1] === 1) count++;
-                arrayDeathObjects.push(new DeathItems(i, j, count));
+                arrayDeathObjects.push(new Cell(i, j, count));
             }
         }
     }
