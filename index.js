@@ -23,3 +23,5 @@
 //     return array;
 // };
 // console.log(killTheCell(test));
+
+console.log('BUENOS DIAS');
