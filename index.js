@@ -6,36 +6,36 @@ const gameOfLife = [
     ['*', '*', '*', '*', '*'],
 ];
 
-// function AliveItems(r, c, countN) {
-//     this.r = r;
-//     this.c = c;
-//     this.countN = countN;
-// }
+function AliveItems(r, c, countN) {
+    this.r = r;
+    this.c = c;
+    this.countN = countN;
+}
 function DeathItems(r, c, countN) {
     this.r = r;
     this.c = c;
     this.countN = countN;
 }
 
-// const countingAliveNeightbours = (array) => {
-//     let arrayAliveObjects = [];
-//     for (let i = 0; i < array.length; i++) {
-//         for (let j = 0; j < array.length; j++) {
-//             if (array[i][j] === 1) {
-//                 let count = 0;
-//                 if (array[i - 1][j] === 1) count++;
-//                 if (array[i + 1][j] === 1) count++;
-//                 if (array[i][j - 1] === 1) count++;
-//                 if (array[i][j + 1] === 1) count++;
-//                 if (array[i - 1][j - 1] === 1) count++;
-//                 arrayAliveObjects.push(new AliveItems(i, j, count));
-//             }
-//         }
-//     }
-//     return arrayAliveObjects;
-// };
+const countingAliveNeightbours = (array) => {
+    let arrayAliveObjects = [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i][j] === 1) {
+                let count = 0;
+                if (array[i - 1][j] === 1) count++;
+                if (array[i + 1][j] === 1) count++;
+                if (array[i][j - 1] === 1) count++;
+                if (array[i][j + 1] === 1) count++;
+                if (array[i - 1][j - 1] === 1) count++;
+                arrayAliveObjects.push(new AliveItems(i, j, count));
+            }
+        }
+    }
+    return arrayAliveObjects;
+};
 
-// console.log(countingAliveNeightbours(gameOfLife));
+console.log(countingAliveNeightbours(gameOfLife));
 
 const countingDeathNeightbours = (array) => {
     let arrayDeathObjects = [];
