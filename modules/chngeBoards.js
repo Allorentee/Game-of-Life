@@ -1,4 +1,4 @@
-import { gameOfLife } from './board.js';
+import { gameOfCells } from './board.js';
 import { changingCellStatus } from './chngeCellStatus.js';
 import {
     aliveDataBaseNeighbours,
@@ -28,14 +28,8 @@ export const boardLoop = (board) => {
             console.table(
                 changingCellStatus(board2, dataBaseAlive, dataBaseDeath)
             );
-            setTimeout(
-                console.table(
-                    changingCellStatus(board2, dataBaseAlive, dataBaseDeath)
-                ),
-                500
-            );
         }
     }
 };
 
-boardLoop(gameOfLife);
+boardLoop(gameOfCells);
