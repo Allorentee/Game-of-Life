@@ -3,9 +3,9 @@ import {
     deathDataBaseNeighbours,
 } from './data-Base.js';
 
-export const changingCellStatus = (board, bdv, bdm) => {
-    bdm = deathDataBaseNeighbours(board);
-    bdv = aliveDataBaseNeighbours(board);
+export const changingCellStatus = (board) => {
+    let bdm = deathDataBaseNeighbours(board);
+    let bdv = aliveDataBaseNeighbours(board);
     const board2 = board;
     bdm.forEach((deathItem) => {
         if (deathItem.countN === 3) {
