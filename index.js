@@ -1,10 +1,6 @@
-import {
-    aliveDataBaseNeighbours,
-    deathDataBaseNeighbours,
-} from './modules/data-Base.js';
+import { gameOfCells } from './modules/board.js';
+import { boardLoop } from './modules/chngeBoards.js';
 
-import { gameOfLife } from './board.js';
-
-console.log(aliveDataBaseNeighbours(gameOfLife));
-console.log(deathDataBaseNeighbours(gameOfLife));
-console.table(gameOfLife);
+setInterval(() => {
+    boardLoop(gameOfCells);
+}, 1000);
