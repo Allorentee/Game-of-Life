@@ -1,4 +1,4 @@
-export const gameOfLife = [
+export const gameOfCells = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 1, 0, 0, 0],
     [0, 0, 1, 0, 0, 0],
