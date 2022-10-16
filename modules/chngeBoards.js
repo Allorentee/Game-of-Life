@@ -17,7 +17,6 @@ export const boardLoop = (board) => {
             console.table(board2);
             board = changingCellStatus(board2);
             centinel = true;
-            continue;
         }
     }
 };
