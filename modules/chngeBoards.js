@@ -1,33 +1,23 @@
 import { gameOfCells } from './board.js';
 import { changingCellStatus } from './chngeCellStatus.js';
-import {
-    aliveDataBaseNeighbours,
-    deathDataBaseNeighbours,
-} from './data-Base.js';
 
 export const boardLoop = (board) => {
-    for (let i = 0; i < 10; i++) {
-        let centinel = true;
-
+    console.table(board);
+    let board2 = changingCellStatus(board);
+    let centinel = true;
+    for (let i = 0; i < 4; i++) {
         if (centinel) {
-            const board3 = changingCellStatus(board);
-            let dataBaseAlive = aliveDataBaseNeighbours(board3);
-            let dataBaseDeath = deathDataBaseNeighbours(board3);
-            changingCellStatus(board3, dataBaseAlive, dataBaseDeath);
+            console.table(board);
+            board2 = changingCellStatus(board);
             centinel = false;
-            console.table(
-                changingCellStatus(board3, dataBaseAlive, dataBaseDeath)
-            );
+            continue;
         }
+
         if (!centinel) {
-            const board2 = changingCellStatus(board);
-            let dataBaseAlive = aliveDataBaseNeighbours(board2);
-            let dataBaseDeath = deathDataBaseNeighbours(board2);
-            changingCellStatus(board2, dataBaseAlive, dataBaseDeath);
+            console.table(board2);
+            board = changingCellStatus(board2);
             centinel = true;
-            console.table(
-                changingCellStatus(board2, dataBaseAlive, dataBaseDeath)
-            );
+            continue;
         }
     }
 };
