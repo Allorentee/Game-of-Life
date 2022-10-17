@@ -13,12 +13,8 @@ export const changingCellStatus = (board) => {
         }
     });
     bdv.forEach((aliveItem) => {
-        if (aliveItem.countN < 2) {
-            board2[aliveItem.r][aliveItem.c] = '🌕';
-        }
-        if (aliveItem.countN > 3) {
-            board2[aliveItem.r][aliveItem.c] = '🌕';
-        }
+        if (aliveItem.countN < 2) board2[aliveItem.r][aliveItem.c] = '🌕';
+        if (aliveItem.countN > 3) board2[aliveItem.r][aliveItem.c] = '🌕';
     });
     return board2;
 };
