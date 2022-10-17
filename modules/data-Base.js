@@ -5,6 +5,11 @@ export function Cell(r, c, countN) {
 }
 
 export const aliveDataBaseNeighbours = (array) => {
+    const errorThree =
+        'Error: to use this function you can only enter an array';
+    if (!Array.isArray(array)) {
+        throw errorThree;
+    }
     let dataBaseAliveCells = [];
     for (let i = 1; i < array.length - 1; i++) {
         for (let j = 1; j < array.length + 1; j++) {
@@ -26,6 +31,11 @@ export const aliveDataBaseNeighbours = (array) => {
 };
 
 export const deathDataBaseNeighbours = (array) => {
+    const errorThree =
+        'Error: to use this function you can only enter an array';
+    if (!Array.isArray(array)) {
+        throw errorThree;
+    }
     let dataBaseDeathCells = [];
     for (let i = 1; i < array.length - 1; i++) {
         for (let j = 1; j < array.length + 1; j++) {
