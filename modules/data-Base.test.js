@@ -1,9 +1,22 @@
-// import { aliveDataBaseNeighbours } from './data-Base.js';
+import {
+    aliveDataBaseNeighbours,
+    deathDataBaseNeighbours,
+} from './data-Base.js';
 
-// describe('Given aliveDataBaseNeighbours function', () => {
-//     test(`when parametres are array numbers , then lenght should be 10`, () => {
-//         let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-//         const result = myLenght(numbers);
-//         expect(result).toBe(10);
-//     });
-// });
+describe('testing countingAliveNeighbours', () => {
+    test('if element entered into function is not an array, it should throw an error', () => {
+        const notArray = 'pepe';
+        expect(() => {
+            aliveDataBaseNeighbours(notArray);
+        }).toThrow();
+    });
+});
+
+describe('testing deathDataBaseNeighbours', () => {
+    test('if element entered into function is not an array, it should throw an error', () => {
+        const notArray = 'pepe';
+        expect(() => {
+            deathDataBaseNeighbours(notArray);
+        }).toThrow();
+    });
+});
